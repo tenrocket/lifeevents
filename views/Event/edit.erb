@@ -1,0 +1,16 @@
+#Update Form
+
+<form action="/events/<%= @edit_event.id %>" method="post">
+	<input type="hidden" name="_method" value="put"> 
+	<input type="text" id="edit_event_description" name="edit_event[description]" value="<%= @edit_event.description %>">
+	<input type="text" id="edit_event_date" name="edit_event[date]" value="<%= @edit_event.date %>">
+	<input type="submit">
+</form>
+
+#Delete Form
+
+<form action="/events/<%= @edit_event.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>
+

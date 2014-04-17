@@ -1,0 +1,17 @@
+	<h1>YOU ATTENDED THESE SCHOOLS</h1>
+
+	<div class = "menu">
+		<ul>
+			<% @schools.each do |school| %>
+			<li><%= school.description %></li>
+			<% end %>
+		</ul>
+	</div>
+
+	<h2>SEARCH FOR A SCHOOL YOU ATTENDED</h2>
+
+	<form action="/schools/search" method="post">
+			<input type="text" id="description" name="school[description]">
+			<input type="submit" value="Search">
+	</form>
+

@@ -1,0 +1,16 @@
+#Update Form
+
+<form action="/schools/<%= school.id %>" method="post">
+	<input type="hidden" name="_method" value="put"> 
+	<input type="text" id="edit_school_description" name="school[description]" value="<%=school.description %>">
+	<input type="text" id="edit_school_date" name="school[date]" value="<%= school.date %>">
+	<input type="submit">
+</form>
+
+#Delete Form
+
+<form action="/schools/<%= school.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete">
+</form>
+
